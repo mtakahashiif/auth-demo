@@ -1,0 +1,16 @@
+{
+    "access_log": "/dev/stdout",
+    "listeners": {
+        "*:8080": {
+            "pass": "applications/webapp"
+        }
+    },
+    "applications": {
+        "webapp": {
+            "type": "python",
+            "path": "/python-packages",
+            "module": "authdemo.webapp",
+            "callable": "app"
+        }
+    }
+}

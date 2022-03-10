@@ -1,0 +1,16 @@
+{
+    "access_log": "/dev/stdout",
+    "listeners": {
+        "*:8080": {
+            "pass": "applications/api-server"
+        }
+    },
+    "applications": {
+        "api-server": {
+            "type": "python",
+            "path": "/python-packages",
+            "module": "authdemo.api",
+            "callable": "app"
+        }
+    }
+}
